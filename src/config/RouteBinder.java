@@ -11,9 +11,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 public class RouteBinder {
     private final Map<String, Map<String, Route>> staticRoutes = new HashMap<>();
@@ -115,21 +118,21 @@ public class RouteBinder {
     private Object[] buildMethodArguments(HttpExchange exchange, Route route, Matcher matcher) throws IOException {
         var parameters = route.method.getParameters();
         var args = new Object[parameters.length];
-        var queryParams = parseQuery(exchange.getRequestURI().getQuery());
+
 
         for (int i = 0; i < parameters.length; i++) {
             if (parameters[i].isAnnotationPresent(PathVariable.class)) {
-                PathVariable pv = parameters[i].getAnnotation(PathVariable.class);
-                String varName = pv.value();
-                args[i] = matcher != null ? matcher.group(varName) : null;
-            } else if (parameters[i].isAnnotationPresent(RequestBody.class)) {
-                InputStream is = exchange.getRequestBody();
-                args[i] = new String(is.readAllBytes());
-            } else if (parameters[i].isAnnotationPresent(RequestParam.class)) {
-                RequestParam rp = parameters[i].getAnnotation(RequestParam.class);
-                String paramName = rp.value();
-                args[i] = queryParams.getOrDefault(paramName, rp.defaultValue());
-            } else if (parameters[i].getType().equals(HttpExchange.class)) {
+                args[i] = matcher != null ? matcher.group(parameters[i].getAnnotation(PathVariable.class).value()) : null;
+            }
+            else if (parameters[i].isAnnotationPresent(RequestBody.class)) {
+                args[i] = new String(exchange.getRequestBody().readAllBytes());
+            }
+            else if (parameters[i].isAnnotationPresent(RequestParam.class)) {
+                var rp = parameters[i].getAnnotation(RequestParam.class);
+                var queryParams = parseQuery(exchange.getRequestURI().getQuery());
+                args[i] = queryParams.getOrDefault(rp.value(), rp.defaultValue());
+            }
+            else if (parameters[i].getType().equals(HttpExchange.class)) {
                 args[i] = exchange;
             } else {
                 args[i] = null;
@@ -138,37 +141,38 @@ public class RouteBinder {
         return args;
     }
 
-    private Map<String, String> parseQuery(String query) {
-        Map<String, String> params = new HashMap<>();
-        if (query != null) {
-            for (String param : query.split("&")) {
-                String[] pair = param.split("=");
-                if (pair.length >= 2) {
-                    params.put(pair[0], pair[1]);
-                } else if (pair.length == 1) {
-                    params.put(pair[0], "");
-                }
-            }
-        }
-        return params;
-    }
-
 //    private Map<String, String> parseQuery(String query) {
-//        return Arrays.stream(query.split("&"))
-//                .map(param -> param.split("=", 2))
-//                .collect(Collectors.toMap(
-//                        param -> URLDecoder.decode(param[0], StandardCharsets.UTF_8),
-//                        param -> URLDecoder.decode(param[1], StandardCharsets.UTF_8),
-//                        (v1, v2) -> v2 // only take last if duplicate
-//                ));
+//        Map<String, String> params = new HashMap<>();
+//        if (query != null) {
+//            for (String param : query.split("&")) {
+//                String[] pair = param.split("=");
+//                if (pair.length >= 2) {
+//                    params.put(pair[0], pair[1]);
+//                } else if (pair.length == 1) {
+//                    params.put(pair[0], "");
+//                }
+//            }
+//        }
+//        return params;
 //    }
+
+    private Map<String, String> parseQuery(String query) {
+        return Arrays.stream(query.split("&"))
+                .map(param -> param.split("=", 2))
+                .collect(Collectors.toMap(
+                        param -> URLDecoder.decode(param[0], StandardCharsets.UTF_8),
+                        param -> URLDecoder.decode(param[1], StandardCharsets.UTF_8),
+                        (v1, v2) -> v2 // only take last if duplicate
+                ));
+    }
 
     private void sendResponse(HttpExchange exchange, int status, String contentType, String response) throws IOException {
         exchange.getResponseHeaders().set("Content-Type", contentType);
         exchange.sendResponseHeaders(status, response.getBytes().length);
-        try (var os = exchange.getResponseBody()) {
-            os.write(response.getBytes());
-        }
+
+        var os = exchange.getResponseBody();
+        os.write(response.getBytes());
+        os.close();
     }
 
     private static class Route {

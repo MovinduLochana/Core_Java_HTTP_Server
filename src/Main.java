@@ -22,6 +22,7 @@ public class Main {
         var routeBinder = new RouteBinder(new BasicController());
         routeBinder.registerWithServer(server.getHttpServer());
 
+        server.serveStaticContent();
         server.start();
 
     }
