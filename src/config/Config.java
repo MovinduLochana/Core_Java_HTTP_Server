@@ -1,3 +1,5 @@
+package config;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -15,10 +17,12 @@ public final class Config {
     private static final String CONFIG = "F:\\Java\\NewProjects\\http_server\\src\\server.properties";
     private static final Properties serverProps = new Properties();
 
-    private static final Logger LOGGER = Logger.getLogger(Config.class.getName());
+    private final Logger LOGGER = Logger.getLogger(Config.class.getName());
 
-    public static String STATIC_DIR = "static";
-    public static int PORT = 9000;
+    private int PORT = 9000;
+
+    public static String STATIC_DIR = "static_content/index.html";
+    public static String DATABASE_FILE = "database.db";
 
     private static final Config instance = new Config();
 
@@ -53,6 +57,9 @@ public final class Config {
 
     public Logger getLogger() {
         return LOGGER;
+    }
+    public int getPort() {
+        return PORT;
     }
 
 }

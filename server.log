@@ -1,10 +1,258 @@
-Jul 02, 2025 1:54:55 AM Config <init>
+Jul 02, 2025 1:54:55 AM config.Config <init>
 INFO: Server Configuration loaded
 Jul 02, 2025 1:54:55 AM Server start
 INFO: Server started
-Jul 02, 2025 2:08:03 AM Config <init>
+Jul 02, 2025 2:08:03 AM config.Config <init>
 INFO: Server Configuration loaded
-Jul 02, 2025 2:08:49 AM Config <init>
+Jul 02, 2025 2:08:49 AM config.Config <init>
 INFO: Server Configuration loaded
-Jul 02, 2025 2:09:40 AM Config <init>
+Jul 02, 2025 2:09:40 AM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 8:27:51 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 8:58:15 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 9:06:36 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 9:07:08 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 9:08:06 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 9:08:35 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 9:27:01 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 9:27:02 PM Server addRoute
+INFO: Added route: /
+Jul 02, 2025 9:27:02 PM Server serveStaticContent
+WARNING: Static directory does not exist: static_content/index.html
+Jul 02, 2025 9:27:02 PM Server addRoute
+INFO: Added route: /api/data
+Jul 02, 2025 9:27:02 PM Server addRoute
+INFO: Added route: /api/user
+Jul 02, 2025 9:28:22 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 9:28:22 PM Server addRoute
+INFO: Added route: /
+Jul 02, 2025 9:28:22 PM Server serveStaticContent
+WARNING: Static directory does not exist: static_content/index.html
+Jul 02, 2025 9:28:22 PM Server addRoute
+INFO: Added route: /api/data
+Jul 02, 2025 9:28:23 PM Server addRoute
+INFO: Added route: /api/user
+Jul 02, 2025 9:29:01 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 9:29:01 PM Server addRoute
+INFO: Added route: /
+Jul 02, 2025 9:29:01 PM Server addRoute
+INFO: Added route: /api/data
+Jul 02, 2025 9:29:01 PM Server addRoute
+INFO: Added route: /api/user
+Jul 02, 2025 9:35:35 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 9:35:35 PM Server addRoute
+INFO: Added route: /
+Jul 02, 2025 9:35:35 PM Server addRoute
+INFO: Added route: /api/data
+Jul 02, 2025 9:35:36 PM Server addRoute
+INFO: Added route: /api/user
+Jul 02, 2025 11:21:27 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 11:21:28 PM Server addRoute
+INFO: Added route: /
+Jul 02, 2025 11:21:28 PM Server addRoute
+INFO: Added route: /api/data
+Jul 02, 2025 11:21:28 PM Server addRoute
+INFO: Added route: /api/user
+Jul 02, 2025 11:23:11 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 11:23:12 PM database.Database <init>
+SEVERE: Failed to load database: writing aborted; java.io.NotSerializableException: database.UserTable$User
+Jul 02, 2025 11:24:20 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 11:24:20 PM database.Database <init>
+SEVERE: Failed to load database: writing aborted; java.io.NotSerializableException: database.UserTable$User
+Jul 02, 2025 11:26:39 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 11:26:39 PM database.Database <init>
+SEVERE: Failed to load database: writing aborted; java.io.NotSerializableException: database.UserTable$User
+Jul 02, 2025 11:27:08 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 11:27:09 PM Server addRoute
+INFO: Added route: /
+Jul 02, 2025 11:27:09 PM Server addRoute
+INFO: Added route: /api/data
+Jul 02, 2025 11:27:09 PM Server addRoute
+INFO: Added route: /api/user
+Jul 02, 2025 11:27:48 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 11:27:48 PM database.Database <init>
+INFO: Database loaded successfully.
+Jul 02, 2025 11:27:48 PM Server addRoute
+INFO: Added route: /
+Jul 02, 2025 11:27:48 PM Server addRoute
+INFO: Added route: /api/data
+Jul 02, 2025 11:27:48 PM Server addRoute
+INFO: Added route: /api/user
+Jul 02, 2025 11:28:15 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 11:28:15 PM database.Database <init>
+INFO: Database loaded successfully.
+Jul 02, 2025 11:28:15 PM Server addRoute
+INFO: Added route: /
+Jul 02, 2025 11:28:15 PM Server addRoute
+INFO: Added route: /api/data
+Jul 02, 2025 11:28:15 PM Server addRoute
+INFO: Added route: /api/user
+Jul 02, 2025 11:28:45 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 11:28:46 PM database.Database <init>
+INFO: Database loaded successfully.
+Jul 02, 2025 11:28:46 PM Server addRoute
+INFO: Added route: /
+Jul 02, 2025 11:28:46 PM Server addRoute
+INFO: Added route: /api/data
+Jul 02, 2025 11:28:46 PM Server addRoute
+INFO: Added route: /api/user
+Jul 02, 2025 11:28:53 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 11:28:54 PM database.Database <init>
+INFO: Database loaded successfully.
+Jul 02, 2025 11:28:54 PM Server addRoute
+INFO: Added route: /
+Jul 02, 2025 11:28:54 PM Server addRoute
+INFO: Added route: /api/data
+Jul 02, 2025 11:28:54 PM Server addRoute
+INFO: Added route: /api/user
+Jul 02, 2025 11:29:05 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 11:29:05 PM database.Database <init>
+INFO: Database loaded successfully.
+Jul 02, 2025 11:29:05 PM Server addRoute
+INFO: Added route: /
+Jul 02, 2025 11:29:05 PM Server addRoute
+INFO: Added route: /api/data
+Jul 02, 2025 11:29:05 PM Server addRoute
+INFO: Added route: /api/user
+Jul 02, 2025 11:33:50 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 11:33:51 PM database.Database <init>
+INFO: Database loaded successfully.
+Jul 02, 2025 11:33:51 PM Server addRoute
+INFO: Added route: /
+Jul 02, 2025 11:33:51 PM Server addRoute
+INFO: Added route: /api/data
+Jul 02, 2025 11:33:51 PM Server addRoute
+INFO: Added route: /api/user
+Jul 02, 2025 11:34:22 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 11:34:23 PM database.Database <init>
+INFO: Database loaded successfully.
+Jul 02, 2025 11:34:23 PM Server addRoute
+INFO: Added route: /
+Jul 02, 2025 11:34:23 PM Server addRoute
+INFO: Added route: /api/data
+Jul 02, 2025 11:34:23 PM Server addRoute
+INFO: Added route: /api/user
+Jul 02, 2025 11:34:40 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 11:34:40 PM database.Database <init>
+INFO: Database loaded successfully.
+Jul 02, 2025 11:34:40 PM Server addRoute
+INFO: Added route: /
+Jul 02, 2025 11:34:40 PM Server addRoute
+INFO: Added route: /api/data
+Jul 02, 2025 11:34:40 PM Server addRoute
+INFO: Added route: /api/user
+Jul 02, 2025 11:56:18 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 02, 2025 11:56:19 PM database.Database <init>
+INFO: Database loaded successfully.
+Jul 02, 2025 11:56:19 PM Server addRoute
+INFO: Added route: /
+Jul 02, 2025 11:56:19 PM Server addRoute
+INFO: Added route: /api/data
+Jul 02, 2025 11:56:19 PM Server addRoute
+INFO: Added route: /api/user
+Jul 03, 2025 12:00:38 AM config.Config <init>
+INFO: Server Configuration loaded
+Jul 03, 2025 12:00:39 AM database.Database <init>
+INFO: Database loaded successfully.
+Jul 03, 2025 12:00:39 AM Server addRoute
+INFO: Added route: /
+Jul 03, 2025 12:00:39 AM Server addRoute
+INFO: Added route: /api/data
+Jul 03, 2025 12:00:39 AM Server addRoute
+INFO: Added route: /api/user
+Jul 03, 2025 12:03:08 AM config.Config <init>
+INFO: Server Configuration loaded
+Jul 03, 2025 12:03:09 AM database.Database <init>
+INFO: Database loaded successfully.
+Jul 03, 2025 12:03:09 AM Server addRoute
+INFO: Added route: /
+Jul 03, 2025 12:03:09 AM Server addRoute
+INFO: Added route: /api/data
+Jul 03, 2025 12:03:09 AM Server addRoute
+INFO: Added route: /api/user
+Jul 03, 2025 12:07:34 AM config.Config <init>
+INFO: Server Configuration loaded
+Jul 03, 2025 12:07:35 AM database.Database <init>
+INFO: Database loaded successfully.
+Jul 03, 2025 12:07:35 AM Server addRoute
+INFO: Added route: /
+Jul 03, 2025 12:07:35 AM Server addRoute
+INFO: Added route: /api/data
+Jul 03, 2025 12:07:35 AM Server addRoute
+INFO: Added route: /api/user
+Jul 03, 2025 12:11:06 AM config.Config <init>
+INFO: Server Configuration loaded
+Jul 03, 2025 12:11:07 AM database.Database <init>
+INFO: Database loaded successfully.
+Jul 03, 2025 12:11:07 AM Server addRoute
+INFO: Added route: /
+Jul 03, 2025 12:11:07 AM Server addRoute
+INFO: Added route: /api/data
+Jul 03, 2025 12:11:07 AM Server addRoute
+INFO: Added route: /api/user
+Jul 03, 2025 12:11:48 AM config.Config <init>
+INFO: Server Configuration loaded
+Jul 03, 2025 12:11:49 AM database.Database <init>
+INFO: Database loaded successfully.
+Jul 03, 2025 12:11:49 AM Server addRoute
+INFO: Added route: /
+Jul 03, 2025 12:11:49 AM Server addRoute
+INFO: Added route: /api/data
+Jul 03, 2025 12:11:49 AM Server addRoute
+INFO: Added route: /api/user
+Jul 03, 2025 3:05:48 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 03, 2025 3:09:11 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 03, 2025 4:48:17 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 03, 2025 8:48:57 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 03, 2025 8:50:00 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 03, 2025 8:53:54 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 03, 2025 9:01:36 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 03, 2025 9:21:18 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 03, 2025 10:24:04 PM config.Config <init>
+INFO: Server Configuration loaded
+Jul 04, 2025 2:08:47 AM config.Config <init>
+INFO: Server Configuration loaded
+Jul 04, 2025 2:10:22 AM config.Config <init>
+INFO: Server Configuration loaded
+Jul 04, 2025 2:14:08 AM config.Config <init>
+INFO: Server Configuration loaded
+Jul 04, 2025 2:15:08 AM config.Config <init>
+INFO: Server Configuration loaded
+Jul 04, 2025 2:21:35 AM config.Config <init>
+INFO: Server Configuration loaded
+Jul 04, 2025 2:21:39 AM config.Config <init>
+INFO: Server Configuration loaded
+Jul 04, 2025 2:23:15 AM config.Config <init>
 INFO: Server Configuration loaded

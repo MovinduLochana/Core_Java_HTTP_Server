@@ -1,3 +1,10 @@
+
+import config.Config;
+import config.RouteBinder;
+import controller.BasicController;
+import database.Database;
+
+import javax.script.ScriptException;
 import java.io.IOException;
 import java.util.logging.Logger;
 
@@ -8,20 +15,14 @@ public class Main {
 
     private static final Logger logger = Config.getInstance().getLogger();
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, ScriptException {
 
         var server = Server.getServer();
 
-        server.serveStatic("/",
-                """
-                     <html>
-                     <body> Hello </body>
-                     </html>
-                    """);
-
-        server.handleGet("/api/data", "data");
-//        server.handlePost("/api/user", "user");
+        var routeBinder = new RouteBinder(new BasicController());
+        routeBinder.registerWithServer(server.getHttpServer());
 
         server.start();
+
     }
 }
